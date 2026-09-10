@@ -1,0 +1,83 @@
+# Core Python / Data
+numpy
+pandas
+scipy
+openpyxl
+pyarrow
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+
+# Deep Learning
+torch
+torchvision
+transformers
+
+# NLP / Text Processing
+nltk
+spacy
+sentence-transformers
+tokenizers
+
+# Image Processing / Screenshots
+Pillow
+opencv-python
+
+# OCR
+pytesseract
+easyocr
+
+# Similarity / Clustering / Dimensionality Reduction
+hdbscan
+umap-learn
+
+# Progress / Utilities
+tqdm
+joblib
+python-dateutil
+pytz
+
+# JSON / YAML / Configuration
+pyyaml
+
+# Notebooks
+jupyter
+ipykernel
+jupyterlab
+
+# Visualization / Interactive Analysis
+ipywidgets
+
+# Web / API
+requests
+httpx
+
+# Web scraping / HTML parsing (if needed)
+beautifulsoup4
+lxml
+
+# Application / Prototype
+streamlit
+
+# API development (if needed later)
+fastapi
+uvicorn
+
+# Flask (if needed later)
+flask
+
+# Experiment tracking / ML lifecycle
+mlflow
+
+# Model / Data validation
+pydantic
+
+# Environment variables
+python-dotenv

@@ -1,0 +1,73 @@
+
+# DATASETS
+# Raw datasets - DO NOT push to GitHub
+data/
+
+# If you later create large local data files
+*.csv
+*.jsonl
+*.parquet
+*.xlsx
+
+
+# PYTHON
+
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+
+
+# VIRTUAL ENVIRONMENT
+
+
+.venv/
+venv/
+env/
+ENV/
+myenv/
+
+
+# JUPYTER
+
+
+.ipynb_checkpoints/
+
+
+# GENERATED OUTPUTS
+
+
+outputs/
+*.log
+
+
+
+# IDE / EDITOR
+
+
+.vscode/
+.idea/
+
+
+
+# OPERATING SYSTEM
+
+
+.DS_Store
+Thumbs.db
+
+
+
+# ENVIRONMENT / SECRETS
+
+
+.env
+.env.*
+!.env.example
+
+
+# Large project datasets
+notebooks/dataset_A/
+notebooks/dataset_B/
