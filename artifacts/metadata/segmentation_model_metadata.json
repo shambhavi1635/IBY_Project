@@ -1,0 +1,41 @@
+{
+    "model_name": "RandomForestClassifier",
+    "model_version": "V1",
+    "random_seed": 42,
+    "boundary_threshold": 0.9,
+    "minimum_boundary_gap_seconds": 5,
+    "n_estimators": 200,
+    "max_depth": 15,
+    "min_samples_leaf": 5,
+    "input_features": [
+        "event_type",
+        "layer",
+        "time_since_previous_event",
+        "time_since_session_start",
+        "is_click",
+        "is_keystroke",
+        "is_app_switch",
+        "is_screenshot",
+        "is_clipboard",
+        "is_browser"
+    ],
+    "categorical_features": [
+        "event_type",
+        "layer"
+    ],
+    "numerical_features": [
+        "time_since_previous_event",
+        "time_since_session_start",
+        "is_click",
+        "is_keystroke",
+        "is_app_switch",
+        "is_screenshot",
+        "is_clipboard",
+        "is_browser"
+    ],
+    "training_sessions": 53,
+    "held_out_test_sessions": 10,
+    "test_boundary_f1_at_3_seconds": 0.745,
+    "test_boundary_precision_at_3_seconds": 0.758,
+    "test_boundary_recall_at_3_seconds": 0.733
+}

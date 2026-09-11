@@ -19,3 +19,11 @@
 - Reconstructed **2,348 raw events** from 2 event files.
 - Tested raw-event windows around process boundaries; found that timing varies and a fixed window is unreliable.
 - **Decision:** Check whether these patterns hold across all 63 sessions before building the segmentation pipeline.
+
+
+## Day 3 — Segmentation Model Development
+
+- Built and evaluated a temporal-gap baseline (V0), followed by supervised boundary detection using Dataset A.
+- Compared multiple ML models; Random Forest achieved the best validation F1 of 0.846.
+- Evaluated on 10 unseen test sessions, achieving Precision = 0.758, Recall = 0.733, and F1 = 0.745 at 3-second tolerance; generated 303 segments.
+- Finalized and saved the Random Forest model, preprocessing pipeline, and metadata; verified successful artifact loading.

@@ -5,7 +5,7 @@ data/
 
 # If you later create large local data files
 *.csv
-*.jsonl
+
 *.parquet
 *.xlsx
 
@@ -36,11 +36,6 @@ myenv/
 .ipynb_checkpoints/
 
 
-# GENERATED OUTPUTS
-
-
-outputs/
-*.log
 
 
 
