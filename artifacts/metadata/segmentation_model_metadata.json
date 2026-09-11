@@ -1,41 +1,69 @@
 {
-    "model_name": "RandomForestClassifier",
-    "model_version": "V1",
-    "random_seed": 42,
-    "boundary_threshold": 0.9,
-    "minimum_boundary_gap_seconds": 5,
-    "n_estimators": 200,
-    "max_depth": 15,
-    "min_samples_leaf": 5,
-    "input_features": [
-        "event_type",
-        "layer",
-        "time_since_previous_event",
-        "time_since_session_start",
-        "is_click",
-        "is_keystroke",
-        "is_app_switch",
-        "is_screenshot",
-        "is_clipboard",
-        "is_browser"
-    ],
-    "categorical_features": [
-        "event_type",
-        "layer"
-    ],
-    "numerical_features": [
-        "time_since_previous_event",
-        "time_since_session_start",
-        "is_click",
-        "is_keystroke",
-        "is_app_switch",
-        "is_screenshot",
-        "is_clipboard",
-        "is_browser"
-    ],
-    "training_sessions": 53,
-    "held_out_test_sessions": 10,
-    "test_boundary_f1_at_3_seconds": 0.745,
-    "test_boundary_precision_at_3_seconds": 0.758,
-    "test_boundary_recall_at_3_seconds": 0.733
+  "model_name": "CatBoost",
+  "model_version": "V2_context_shift_candidates_resume_aware",
+  "random_seed": 42,
+  "boundary_threshold": 0.95,
+  "min_segment_duration_seconds": 15,
+  "boundary_event_types_used_as_candidates": [
+    "app_switch",
+    "browser_navigation",
+    "browser_tab_event",
+    "dialog_closed",
+    "dialog_opened",
+    "window_state_change",
+    "window_title_change"
+  ],
+  "feature_columns": [
+    "event_type",
+    "layer",
+    "gap_before_candidate_s",
+    "time_since_prev_event_s",
+    "time_since_session_start_s",
+    "app_changed",
+    "title_changed",
+    "events_in_prior_10s",
+    "events_in_next_10s",
+    "is_app_switch",
+    "is_browser_navigation",
+    "is_browser_tab_event",
+    "is_dialog_closed",
+    "is_dialog_opened",
+    "is_window_state_change",
+    "is_window_title_change"
+  ],
+  "categorical_features": [
+    "event_type",
+    "layer"
+  ],
+  "numeric_features": [
+    "gap_before_candidate_s",
+    "time_since_prev_event_s",
+    "time_since_session_start_s",
+    "app_changed",
+    "title_changed",
+    "events_in_prior_10s",
+    "events_in_next_10s",
+    "is_app_switch",
+    "is_browser_navigation",
+    "is_browser_tab_event",
+    "is_dialog_closed",
+    "is_dialog_opened",
+    "is_window_state_change",
+    "is_window_title_change"
+  ],
+  "gt_boundary_sources": [
+    "process_started",
+    "process_resumed"
+  ],
+  "label_tolerance_seconds": 2.0,
+  "train_sessions": 44,
+  "validation_sessions": 9,
+  "test_sessions": 10,
+  "test_boundary_precision_2000ms": 0.9572649572649573,
+  "test_boundary_recall_2000ms": 0.6850152905198776,
+  "test_boundary_f1_2000ms": 0.7985739750445633,
+  "test_segment_iou50_precision": 0.8717948717948718,
+  "test_segment_iou50_recall": 0.6238532110091743,
+  "test_segment_iou50_f1": 0.7272727272727273,
+  "notes": "V2 differs from the original segmentation_model.ipynb in three ways: (1) GT boundaries include process_resumed, not just process_started; (2) candidates are restricted to context-shift event types instead of ALL raw events; (3) minimum segment duration for post-processing is set to 15s based on the empirically measured true-segment minimum duration (16.64s), not an arbitrary fixed gap value. Segment LABELING (assigning a process identity to each segment) is intentionally out of scope for this model -- see the separate labeling notebook."
 }
