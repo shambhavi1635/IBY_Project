@@ -59,3 +59,9 @@ Validated existing outputs and identified a minor 9/98 segment merge-floor issue
 Built and tested an automation suitability framework; ranking remained robust across alternative scoring methods and weightings.
 Selected process_cluster_0 as the top candidate: 64 occurrences, 14/15 sessions, 51.5% activity time, low behavioral variance, and limited app usage.
 Saved the selection notebook and outputs. Next: identify the actual business process from extracted text/screenshots before automation design.
+
+## Day 5.5 — Automation Justification
+Built process_automation_justification.ipynb to provide evidence for why process_cluster_0 is the best automation candidate, independently validating its profile from raw segmentation outputs.
+Confirmed strong evidence: 64 occurrences, 14/15 sessions, 4 machines, 51.5% activity time, low behavioral variance (CV 0.020), and 0.929 automation score vs. 0.354 for the runner-up; 100% win rate across 5,000 weightings.
+Documented that human decision-making and error rates cannot yet be established from current data. Saved the profile, comparisons, methodology, and evidence plots to outputs/.
+Decision: identify the actual business process using sampled screenshots/extracted_text before Step 3. The Day 5 merge-floor issue remains documented.

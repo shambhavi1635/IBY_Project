@@ -1,0 +1,51 @@
+{
+  "selected_process": "process_cluster_0",
+  "selection_source": "outputs/process_automation_ranking.csv (rank 1), cross-checked against process_automation_methodology.json",
+  "repetition": {
+    "n_occurrences": 64,
+    "n_sessions_present": 14,
+    "n_sessions_total": 15,
+    "session_coverage_pct": 93.3,
+    "n_distinct_machines": 4
+  },
+  "time_opportunity": {
+    "total_duration_s": 5446.2,
+    "pct_of_total_observed_time": 51.5,
+    "mean_duration_s": 85.1,
+    "median_duration_s": 73.0
+  },
+  "consistency": {
+    "behavioral_cv": 0.02038016124482977,
+    "rank_among_all_segments_low_to_high": 1,
+    "n_segments_compared": 5
+  },
+  "variability": {
+    "duration_cv": 0.4872816325512048
+  },
+  "complexity": {
+    "median_n_events": 135.5,
+    "mean_n_events": 159.484375,
+    "mean_n_distinct_apps": 2.65625,
+    "dominant_apps": {
+      "Microsoft Edge": 60,
+      "Microsoft Word": 4
+    }
+  },
+  "application_interaction": {
+    "mean_structured_interaction_share": 0.1678658526537989,
+    "pct_executions_dominant_app_edge": 93.75
+  },
+  "human_interaction": "not established by the available data -- see Section 7",
+  "comparison_with_alternatives": {
+    "automation_score": 0.9285714285714286,
+    "runner_up_label": "process_cluster_4",
+    "runner_up_automation_score": 0.3544686959644206,
+    "weight_sensitivity_win_share_pct": 100.0,
+    "weight_sensitivity_n_trials": 5000
+  },
+  "known_limitations": [
+    "Label is a KMeans cluster id, not a domain-confirmed business process name -- needs screenshot/extracted_text review before Step 3 engineering commitment.",
+    "9/98 Dataset B segments violate the 15s merge floor upstream (see segmentation_quality_report.json); not fixed in this notebook.",
+    "Human decision-making presence and error/interruption rates are not present in the current per-segment features and are not claimed here."
+  ]
+}

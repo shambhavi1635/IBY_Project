@@ -1,0 +1,53 @@
+
+SELECTED PROCESS
+----------------
+process_cluster_0
+
+AUTOMATION JUSTIFICATION
+------------------------
+Repetition:
+  64 occurrences across 14/15
+  sessions (93.3% coverage), 4 distinct
+  machines -- the most frequent process segment in Dataset B.
+
+Time Opportunity:
+  5446.2s total observed time (51.5% of all
+  logged Dataset B activity time), median execution 73.0s.
+
+Consistency (event-type mix):
+  behavioral_cv = 0.0204, the lowest
+  among all 5 segments -- executions follow a similar mix of actions.
+
+Variability (duration):
+  duration_cv = 0.487 -- moderate; execution length varies more than the action mix does.
+
+Complexity:
+  median 136 events/execution, mean 2.66
+  distinct applications, dominant apps observed: {'Microsoft Edge': 60, 'Microsoft Word': 4}.
+
+Application interaction:
+  mean structured (browser form/click/navigation) interaction share = 0.168;
+  94% of executions dominated by a single
+  browser-based application.
+
+Human interaction / decision-making:
+  Not established by the available data -- no field indicates presence/absence of judgment calls
+  or error/interruption events for this process. See Section 7.
+
+Comparison with alternatives:
+  automation_score 0.929 vs. runner-up
+  process_cluster_4 at
+  0.354 -- robust to
+  weighting choice (100.0%
+  win-share across 5000 random re-weightings).
+
+FINAL ASSESSMENT
+----------------
+process_cluster_0 is the most frequent, highest-time-footprint, and most behaviorally
+consistent reliable process segment identified in Dataset B, with a moderate-but-bounded
+duration spread and a small, browser-centric application footprint. This is evidence-based
+support for prioritizing it as the Step-3 automation target. What remains unverified from log
+data alone -- and should be confirmed before committing full engineering effort -- is (a) the
+actual business-process identity behind this cluster (via sampled screenshots / extracted_text,
+since the label is a KMeans cluster id, not a confirmed process name), and (b) the degree of
+human judgment involved, which this dataset cannot answer.
