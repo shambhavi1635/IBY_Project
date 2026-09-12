@@ -1,0 +1,6 @@
+label,n_occurrences,n_sessions,total_duration_s,mean_duration_s,median_duration_s,n_distinct_machines
+process_cluster_0,64,14,5446.176,85.0965,72.9965,4
+process_cluster_4,18,12,4622.409,256.8005,236.7695,4
+process_cluster_1,13,10,248.446,19.11123076923077,13.367,4
+process_cluster_3,2,1,241.519,120.7595,120.7595,1
+process_cluster_2,1,1,16.281,16.281,16.281,1

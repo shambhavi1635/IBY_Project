@@ -1,0 +1,66 @@
+{
+  "chronological_ordering": {
+    "passed": true,
+    "detail": ""
+  },
+  "start_before_end": {
+    "passed": true,
+    "detail": ""
+  },
+  "segments_within_session_bounds": {
+    "passed": true,
+    "detail": ""
+  },
+  "no_duplicate_segments": {
+    "passed": true,
+    "detail": "0 duplicate(s) found"
+  },
+  "no_overlapping_segments": {
+    "passed": true,
+    "detail": ""
+  },
+  "no_impossible_timestamps": {
+    "passed": true,
+    "detail": ""
+  },
+  "no_segments_below_merge_floor": {
+    "passed": false,
+    "detail": "9 segment(s) shorter than the 15s merge floor (should be structurally impossible given the merge step; a non-zero count needs investigation)"
+  },
+  "suspiciously_long_segments": {
+    "count": 1,
+    "p99_duration_s": 394.1813300000003
+  },
+  "segments_per_session": {
+    "ses_20260701-164424-CHAITANYA0BCF": 5,
+    "ses_20260701-171614-CHAITANYA0BCF": 10,
+    "ses_20260701-173246-SIDDHIGUPTAB00B": 9,
+    "ses_20260701-173642-NEELA9BAF": 6,
+    "ses_20260701-175258-LAPTOP-76QMG9DE": 8,
+    "ses_20260701-175747-SIDDHIGUPTAB00B": 8,
+    "ses_20260701-180923-NEELA9BAF": 7,
+    "ses_20260701-181413-LAPTOP-76QMG9DE": 8,
+    "ses_20260701-181913-SIDDHIGUPTAB00B": 5,
+    "ses_20260701-182634-NEELA9BAF": 6,
+    "ses_20260701-183232-LAPTOP-76QMG9DE": 5,
+    "ses_20260701-184201-LAPTOP-76QMG9DE": 8,
+    "ses_20260701-190250-NEELA9BAF": 6,
+    "ses_20260701-191537-LAPTOP-76QMG9DE": 6,
+    "ses_20260701-192455-NEELA9BAF": 1
+  },
+  "n_unique_labels": 5,
+  "event_coverage_fraction": 1.0,
+  "label_consistent_per_cluster": {
+    "passed": true,
+    "detail": ""
+  },
+  "no_identical_intervals_across_sessions": {
+    "passed": true,
+    "detail": ""
+  },
+  "failed_to_load_sessions": [],
+  "chosen_labeling_method": "KMeans(k=5)",
+  "n_sessions_processed": 15,
+  "n_events_processed": 20477,
+  "n_segments_generated": 98
+}

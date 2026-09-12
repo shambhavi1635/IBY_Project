@@ -4,7 +4,7 @@
 data/
 
 # If you later create large local data files
-*.csv
+
 
 *.parquet
 *.xlsx
@@ -67,4 +67,3 @@ Thumbs.db
 notebooks/dataset_A/
 notebooks/dataset_B/
 
-catboost_info/
