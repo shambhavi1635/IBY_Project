@@ -1,0 +1,34 @@
+{
+  "dataset": "dataset_a",
+  "reusable_on_dataset_b": false,
+  "reason_not_reusable": "Dataset B has a completely different set of business processes (different department, different applications). This clusterer's cluster centers/structure are specific to Dataset A's 15 processes and have no meaningful correspondence on Dataset B. Dataset B requires refitting this SAME APPROACH from scratch on its own segments.",
+  "chosen_method": "HDBSCAN(min_cluster_size=30)",
+  "categorical_features": [
+    "dominant_app_grouped"
+  ],
+  "numeric_features": [
+    "duration_s",
+    "n_events",
+    "n_distinct_apps",
+    "hour_sin",
+    "hour_cos",
+    "frac_keystroke",
+    "frac_mouse_click",
+    "frac_mouse_double_click",
+    "frac_mouse_scroll",
+    "frac_clipboard_change",
+    "frac_shortcut",
+    "frac_browser_click",
+    "frac_browser_form_input",
+    "frac_browser_navigation",
+    "frac_screenshot_smart"
+  ],
+  "top_k_apps_kept": 12,
+  "used_extracted_text_features": "True",
+  "extracted_text_segment_coverage": 0.9933065595716198,
+  "n_predicted_segments": 1494,
+  "n_labeled_for_validation": 1045,
+  "validation_purity": 0.10334928229665072,
+  "validation_adjusted_rand_index": 0.000684321155628776,
+  "random_seed": 42
+}
