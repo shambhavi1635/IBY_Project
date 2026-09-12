@@ -51,3 +51,11 @@
 * Performed structural quality checks and saved the final segmentation outputs and reports.
 * Reloaded `segments.jsonl` from disk and verified the submission schema.
 * **Final design:** Boundary detection transfers **A → B**; segment labeling is **refit independently on B**.
+
+
+
+## Day 5  Process Selection
+Validated existing outputs and identified a minor 9/98 segment merge-floor issue, logged for the next re-run.
+Built and tested an automation suitability framework; ranking remained robust across alternative scoring methods and weightings.
+Selected process_cluster_0 as the top candidate: 64 occurrences, 14/15 sessions, 51.5% activity time, low behavioral variance, and limited app usage.
+Saved the selection notebook and outputs. Next: identify the actual business process from extracted text/screenshots before automation design.

@@ -1,0 +1,33 @@
+{
+  "min_occurrences_for_ranking": 3,
+  "excluded_labels": [
+    "process_cluster_2",
+    "process_cluster_3"
+  ],
+  "features_higher_better": [
+    "n_occurrences",
+    "total_duration_s",
+    "n_distinct_machines",
+    "structured_interaction_share"
+  ],
+  "features_lower_better": [
+    "duration_cv",
+    "behavioral_cv",
+    "mean_n_distinct_apps"
+  ],
+  "normalization": "min-max across reliable candidates; lower-better features inverted (1 - x)",
+  "weighting": "equal weights (primary); Borda-style average-rank as cross-check",
+  "random_seed": 42,
+  "weight_sensitivity_n_trials": 5000,
+  "weight_sensitivity_win_share_pct": {
+    "process_cluster_0": 100.0
+  },
+  "top_candidate": "process_cluster_0",
+  "top_candidate_score": 0.9285714285714286,
+  "known_upstream_issue_not_fixed_here": "9/98 Dataset B segments violate the 15s merge floor -- see Section 3.6. Recommend fixing boundaries_to_segments() in segmentation_datasetb.ipynb before the next full re-run.",
+  "factors_not_available_in_current_outputs": [
+    "human_decision_making_presence",
+    "error_or_interruption_rate",
+    "exact_distance_to_cluster_centroid"
+  ]
+}
